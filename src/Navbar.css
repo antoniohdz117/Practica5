@@ -1,0 +1,73 @@
+/* Estilo de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #0e34cc;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+/* Estilo del ícono del menú de 3 líneas */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* Animación cuando el menú está abierto */
+.line.open {
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.line.open:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+}
+
+/* Estilo del menú desplegable */
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background-color: #0468a3;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(14, 108, 200, 0.3);
+}
+
+.menu.open {
+    display: block;
+}
+
+.menu-item {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: #0c7fda;
+}
